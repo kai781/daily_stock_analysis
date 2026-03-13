@@ -62,6 +62,11 @@ jobs:
           # AI 配置
           # ==========================================
           # Gemini AI（主选）
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          LITELLM_MODEL: ${{ secrets.LITELLM_MODEL }}
+          LITELLM_FALLBACK_MODELS: ${{ secrets.LITELLM_FALLBACK_MODELS }}
+
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || secrets.GEMINI_MODEL || 'gemini-3-flash-preview' }}
           GEMINI_MODEL_FALLBACK: ${{ vars.GEMINI_MODEL_FALLBACK || secrets.GEMINI_MODEL_FALLBACK || 'gemini-2.5-flash' }}
